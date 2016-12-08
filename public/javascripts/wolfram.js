@@ -7,9 +7,10 @@ function HelloWorld()
 
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http) {
-  $scope.firstName="Matthew";
+  // $scope.firstName="Matthew";
 
   $scope.Wolfram = function() {
+    $scope.resultDiv = $scope.firstName;
     alert("Wolfram Function");
     url = 'http://api.wolframalpha.com/v2/query?input=pi&appid=UKVQX8-68VAQJWH5P'
     $http.get(url)
@@ -18,9 +19,6 @@ app.controller('myCtrl', function($scope, $http) {
     });
   }
 
-  $http.get('http://api.wolframalpha.com/v2/query?input=pi&appid=UKVQX8-68VAQJWH5P').success(function(data) {
-    console.debug(data);
-  })
 
 
 });
