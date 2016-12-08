@@ -127,7 +127,7 @@ limitations under the License.
           var providerData = user.providerData;
 
           // Enable button
-          var btn = document.getElementById('submitButton')
+          var btn = document.getElementById('submitButton');
           btn.disabled=false;
 
           // [START_EXCLUDE]
@@ -143,6 +143,8 @@ limitations under the License.
           document.getElementById('quickstart-account-details').textContent = 'null';
           document.getElementById('quickstart-oauthtoken').textContent = 'null';
           // [END_EXCLUDE]
+          var btn = document.getElementById('submitButton');
+          btn.disabled=true;
         }
         // [START_EXCLUDE]
         document.getElementById('quickstart-sign-in').disabled = false;
