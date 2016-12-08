@@ -144,7 +144,7 @@ limitations under the License.
           document.getElementById('quickstart-oauthtoken').textContent = 'null';
           // [END_EXCLUDE]
           var btn = document.getElementById('submitButton');
-          btn.disabled=true;
+          btn.disabled=false;
         }
         // [START_EXCLUDE]
         document.getElementById('quickstart-sign-in').disabled = false;
@@ -206,9 +206,13 @@ limitations under the License.
               <small id="NameHelp" class="form-text text-muted">Enable by logging in to Github</small>
             </div>
 
-            <button type="submit" id="submitButton" class="btn btn-primary" onclick="HelloWorld()" disabled=true>Submit</button>
+            <button type="submit" id="submitButton" class="btn btn-primary" ng-click="Wolfram()" disabled=false>Submit</button>
 
           </form>
+
+          <div id="result" ng-model="resultDiv">
+
+          </div>
 
         </div>
       </div>
